@@ -88,8 +88,8 @@ Resources:
                   - "s3:GetBucketVersioning"
                   - "s3:PutObject"
                 Resource:
-                  - !GetAtt PipelineBucket.Arn
-                  - !Join ['', [!GetAtt PipelineBucket.Arn, "/*"]]
+                  - !GetAtt "arn:aws:s3:::chrisubick.io"
+                  - !Join ['', [!GetAtt "arn:aws:s3:::chrisubick.io", "/*"]]
               -
                 Effect: Allow
                 Action:
@@ -99,8 +99,8 @@ Resources:
                   - "s3:PutObject"
                   - "s3:PutObjectAcl"
                 Resource:
-                  - !GetAtt DeployBucket.Arn
-                  - !Join ['', [!GetAtt DeployBucket.Arn, "/*"]]
+                  - !GetAtt "arn:aws:s3:::chrisubick.io"
+                  - !Join ['', [!GetAtt "arn:aws:s3:::chrisubick.io", "/*"]]
               -
                 Effect: Allow
                 Action:
@@ -172,7 +172,7 @@ Resources:
             post_build:
               commands:
                 - aws s3 cp --recursive --acl public-read ./build s3://chrisubick.io/
-                - aws s3 cp --acl public-read --cache-control="max-age=0, no-cache, no-store, must-revalidate" ./build/service-worker.js s3://chrisubick.io/
+                - aws s3 cp --acl public-read --cache-control="max-age=0, no-cache, no-store, must-revalidate" ./build/service-worker.js s3://chrisubick.io}/
                 - aws s3 cp --acl public-read --cache-control="max-age=0, no-cache, no-store, must-revalidate" ./build/index.html s3://chrisubick.io/
                 - aws cloudfront create-invalidation --distribution-id ${Distribution} --paths /index.html /service-worker.js
           artifacts:
@@ -193,8 +193,8 @@ Resources:
       DistributionConfig:
         Origins:
           -
-            DomainName: !GetAtt DeployBucket.DomainName
-            Id: !Ref DeployBucket
+            DomainName: !GetAtt "chrisubick.io"
+            Id: !Ref "chrisubick-io"
             S3OriginConfig:
               OriginAccessIdentity: ''
         DefaultRootObject: index.html
@@ -204,5 +204,5 @@ Resources:
           MaxTTL: 31536000
           ForwardedValues:
             QueryString: true
-          TargetOriginId: !Ref DeployBucket
+          TargetOriginId: !Ref "chrisubick-io"
           ViewerProtocolPolicy: "redirect-to-https"
