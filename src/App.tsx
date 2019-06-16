@@ -1,24 +1,23 @@
 import React from 'react';
 import './App.scss';
-import { Grid } from '@material-ui/core';
 import Avatar from '@material-ui/core/Avatar';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import imageFile from './static/chrisubick.jpg';
-import FormGroup from '@material-ui/core/FormGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Switch from '@material-ui/core/Switch';
 import AppBar from '@material-ui/core/AppBar';
-import IconButton from '@material-ui/core/IconButton';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import { AccountCircle } from '@material-ui/icons';
-import MenuIcon from '@material-ui/icons/Menu';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
+import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
+import { ThemeProvider } from '@material-ui/styles';
+import { blueGrey, brown } from '@material-ui/core/colors';
+import { Job } from './model/job';
+import jobsFile from './data/jobs.json';
 
 const useStyles = makeStyles(theme => ({
     avatar: {
         margin: 10,
+    },
+    grow: {
+        flexGrow: 100,
     },
     bigAvatar: {
         margin: 10,
@@ -27,6 +26,7 @@ const useStyles = makeStyles(theme => ({
     },
     root: {
         flexGrow: 1,
+        backgroundColor: '#E1DFD7',
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -34,7 +34,74 @@ const useStyles = makeStyles(theme => ({
     title: {
         flexGrow: 1,
     },
+    currentTitle: {
+        fontStyle: 'italic',
+    },
+    contactInfo: {
+        float: 'right',
+        flexGrow: 1,
+    },
+    contactInfoItem: {
+        textAlign: 'right',
+    },
+    summary: {
+        margin: '8px 32px',
+        border: '1px #546e7a solid',
+        borderRadius: '5px',
+    },
+    summaryContent: {
+        padding: '8px',
+    },
+    experience: {
+        margin: '8px 32px',
+        border: '1px #546e7a solid',
+        borderRadius: '5px',
+    },
+    experienceContent: {
+        padding: '8px',
+    },
+    education: {
+        margin: '8px 32px',
+        border: '1px #546e7a solid',
+        borderRadius: '5px',
+    },
+    educationContent: {
+        padding: '8px',
+    },
+    volunteer: {
+        margin: '8px 32px',
+        border: '1px #546e7a solid',
+        borderRadius: '5px',
+    },
+    volunteerContent: {
+        padding: '8px',
+    },
+    skills: {
+        margin: '8px 32px',
+        border: '1px #546e7a solid',
+        borderRadius: '5px',
+    },
+    skillsContent: {
+        padding: '8px',
+    },
+    cvSection: {
+        margin: '8px 32px',
+        border: '1px #546e7a solid',
+        borderRadius: '3px',
+    },
+    sectionHeader: {
+        fontSize: '1.2em',
+        padding: '8px 8px 0 8px',
+        color: '#546e7a',
+    }
 }));
+
+const theme = createMuiTheme({
+    palette: {
+        primary: {main: blueGrey[600], light: '#F3F3EC'}, // Purple and green play nicely together.
+        secondary: {main: brown[400], light: '#F3F3EC'}, // This is just green.A700 as hex.
+    },
+});
 
 function App() {
     const classes = useStyles();
@@ -42,73 +109,108 @@ function App() {
         src: imageFile,
         alt: 'my image',
     };
-    const [auth, setAuth] = React.useState(true);
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const open = Boolean(anchorEl);
-
-    function handleChange(event: any) {
-        setAuth(event.target.checked);
-    }
-
-    function handleMenu(event: any) {
-        setAnchorEl(event.currentTarget);
-    }
-
-    function handleClose() {
-        setAnchorEl(null);
-    }
-
+    const skillsList: string[] = ['Java', 'JavaScript', 'React', 'Angular', 'HTML', 'CSS', 'Node.js', 'CI/CD', 'MongoDB', 'MySQL', 'MSSQL', 'C#']
+    const toolsList: string[] = ['IntelliJ', 'Postman', 'VSCode', 'VisualStudio', 'Slack', 'PhotoShop', 'Illustrator', 'XD']
+    const listItems = skillsList.map((d) => <span key={d}>{d} </span>)
+    const jobs: Array<Job> = JSON.parse(JSON.stringify(jobsFile));
     return (
-        <div className={classes.root}>
-            {/*<FormGroup>*/}
-            {/*    <FormControlLabel*/}
-            {/*        control={<Switch checked={auth} onChange={handleChange} aria-label="LoginSwitch"/>}*/}
-            {/*        label={auth ? 'Logout' : 'Login'}*/}
-            {/*    />*/}
-            {/*</FormGroup>*/}
-            <AppBar position="static">
-                <Toolbar>
-                    {/*<IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="Menu">*/}
-                    {/*    <MenuIcon/>*/}
-                    {/*</IconButton>*/}
-                    <Avatar alt="Remy Sharp" src={avatarImage.src} className={classes.avatar}/>
-                    <Typography variant="h6" className={classes.title}>
-                        Chris Ubick
+        <ThemeProvider theme={theme}>
+            <div className={classes.root}>
+                <AppBar position="sticky">
+                    <Toolbar>
+                        <Avatar alt="Remy Sharp" src={avatarImage.src} className={classes.bigAvatar}/>
+                        <div>
+                            <Typography variant="h6" className={classes.title}>
+                                Chris Ubick
+                            </Typography>
+                            <Typography variant="subtitle1" className={classes.currentTitle}>
+                                Software Engineer, Tech Lead
+                            </Typography>
+                        </div>
+                        <div className={classes.grow}/>
+                        <div className={classes.contactInfo}>
+                            <Typography variant="subtitle2" className={classes.contactInfoItem}>
+                                chrisubick@gmail.com
+                            </Typography>
+                            <Typography variant="subtitle2" className={classes.contactInfoItem}>
+                                503.810.6593
+                            </Typography>
+                        </div>
+                    </Toolbar>
+                </AppBar>
+                <div className={classes.cvSection}>
+                    <Typography variant="body1" className={classes.summaryContent}>
+                        Software developer for web and mobile applications with a passion for learning and sharpening my
+                        skills in the latest technologies.
                     </Typography>
-                    {/*{auth && (*/}
-                    {/*    <div>*/}
-                    {/*        <IconButton*/}
-                    {/*            aria-label="Account of current user"*/}
-                    {/*            aria-controls="menu-appbar"*/}
-                    {/*            aria-haspopup="true"*/}
-                    {/*            onClick={handleMenu}*/}
-                    {/*            color="inherit"*/}
-                    {/*        >*/}
-                    {/*            <AccountCircle/>*/}
-                    {/*        </IconButton>*/}
-                    {/*        <Menu*/}
-                    {/*            id="menu-appbar"*/}
-                    {/*            anchorEl={anchorEl}*/}
-                    {/*            anchorOrigin={{*/}
-                    {/*                vertical: 'top',*/}
-                    {/*                horizontal: 'right',*/}
-                    {/*            }}*/}
-                    {/*            keepMounted*/}
-                    {/*            transformOrigin={{*/}
-                    {/*                vertical: 'top',*/}
-                    {/*                horizontal: 'right',*/}
-                    {/*            }}*/}
-                    {/*            open={open}*/}
-                    {/*            onClose={handleClose}*/}
-                    {/*        >*/}
-                    {/*            <MenuItem onClick={handleClose}>Profile</MenuItem>*/}
-                    {/*            <MenuItem onClick={handleClose}>My account</MenuItem>*/}
-                    {/*        </Menu>*/}
-                    {/*    </div>*/}
-                    {/*)}*/}
-                </Toolbar>
-            </AppBar>
-        </div>
+                </div>
+                <div className={classes.cvSection}>
+                    <Typography variant="subtitle2" className={classes.sectionHeader}>
+                        Skills
+                    </Typography>
+                    <Typography variant="body1" className={classes.skillsContent}>
+                        {listItems}
+                    </Typography>
+                </div>
+                <div className={classes.cvSection}>
+                    <Typography variant="subtitle2" className={classes.sectionHeader}>
+                        Experience
+                    </Typography>
+                    {
+                        <div>
+                            {jobs.map(job =>
+                                <div>
+                                    <span>{job.title}</span> at <span>{job.companyName}</span>
+                                    <div>
+                                        <span>{job.start}</span> to <span>{job.end != '' ? job.end : 'Present'}</span>
+                                    </div>
+                                    <div>
+                                        {job.description}
+                                    </div>
+                                    <div>
+                                        Skills: {job.skills}
+                                    </div>
+                                </div>
+                            )}
+                        </div>
+                    }
+                </div>
+                <div className={classes.cvSection}>
+                    <Typography variant="subtitle2" className={classes.sectionHeader}>
+                        Education
+                    </Typography>
+                    <Typography variant="subtitle1" className={classes.educationContent}>
+                        Oregon Institute of Technology
+                    </Typography>
+                    <Typography variant="subtitle2" className={classes.educationContent}>
+                        Studied Software Engineering
+                    </Typography>
+                    <Typography variant="subtitle1" className={classes.educationContent}>
+                        Portland Community College
+                    </Typography>
+                    <Typography variant="subtitle2" className={classes.educationContent}>
+                        Associate of Science Degree, June 2012 <br/>
+                        Renewable Energy Systems: Electrical Engineering Career Pathway Certificate, June 2011 <br/>
+                        STEM Scholarship: Tuition and Expenses, 2010 – 2012
+                    </Typography>
+                </div>
+                <div className={classes.cvSection}>
+                    <Typography variant="subtitle2" className={classes.sectionHeader}>
+                        Volunteering
+                    </Typography>
+                    <Typography variant="subtitle1" className={classes.volunteerContent}>
+                        Family Dogs New Life Shelter
+                    </Typography>
+                    <Typography variant="subtitle2" className={classes.volunteerContent}>
+                        Member Board of Directors
+                    </Typography>
+
+                    <Typography variant="body1" className={classes.volunteerContent}>
+                        Adopt a dog from Portland's no kill dog shelter. Find love. Give life.
+                    </Typography>
+                </div>
+            </div>
+        </ThemeProvider>
     );
 }
 

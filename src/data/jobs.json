@@ -1,0 +1,115 @@
+[
+  {
+    "companyName": "U.Group",
+    "title": "Software Engineer, Tech Lead",
+    "start": "12/15/2017",
+    "end": "",
+    "current": true,
+    "description": "Current job description",
+    "skills": [
+      "Java",
+      "Angular",
+      "React",
+      "Jira",
+      "Concourse",
+      "Terraform",
+      "AWS",
+      "Protractor",
+      "Jest",
+      "Jasmine"
+    ]
+  },
+  {
+    "companyName": "Chris Ubick Consulting Services",
+    "title": "Software Engineer, Owner",
+    "start": "6/15/2013",
+    "end": "",
+    "current": true,
+    "description": "I have worked with a number of companies as a web development consultant outside of my software day job. This work has included building out Umbraco CMS web applications, custom SharePoint web parts and full stack Node.js applications using Express, AngularJS, MongoDB, and React. I’ve used a number of software management tools including TFS, JIRA, Confluence, Rally, and Pivotal Tracker. Clients include Digital Turf, NuTandem Software, Valley Oak Winery, Tulip Shop Tavern, and United Association (ua.org).",
+    "skills": [
+      "Java",
+      "Angular",
+      "React",
+      "Jira",
+      "Concourse",
+      "Terraform",
+      "AWS",
+      "Protractor",
+      "Jest",
+      "Jasmine"
+    ]
+  },
+  {
+    "companyName": "Epiq Systems",
+    "title": "Software Engineer",
+    "start": "6/15/2017",
+    "end": "12/15/2017",
+    "current": false,
+    "description": "Current job description",
+    "skills": [
+      "Java",
+      "Angular",
+      "React",
+      "Jira",
+      "Concourse",
+      "Terraform",
+      "AWS",
+      "Protractor",
+      "Jest",
+      "Jasmine"
+    ]
+  },
+  {
+    "companyName": "Genesis",
+    "title": "Software Developer",
+    "start": "9/15/2015",
+    "end": "6/15/2017",
+    "current": false,
+    "description": "I work on an Agile Scrum team of four developers and two QA testers. We work in fast paced, two week sprints to deliver stable, flexible and well tested code to meet business driven needs. Every story includes unit testing, monitoring considerations and security checks. The stack consists of SQL servers and .NET N-Tier web applications with MVC and AngularJS clients. Many of the applications are hosted in Azure. I focus on client code, but spend a lot of time in the middle tiers and backend. I also built and am currently the administrator for our deployment process, where we use Octopus and TeamCity for continuous integration. I am one of three members of our architecture committee where we design solutions to larger projects, this includes creating prototypes outside the .NET environment and describing in detail the return on investment possibilities of technologies like Docker, Node.js, TypeScript, and Angular 2.",
+    "skills": [
+      "C#",
+      "AngularJS",
+      "Angular",
+      "MSSQL",
+      "TFS",
+      "Octopus",
+      "HTML",
+      "CSS"
+    ]
+  },
+  {
+    "companyName": "Intel",
+    "title": "Software Developer Intern",
+    "start": "6/15/2013",
+    "end": "9/15/2015",
+    "current": false,
+    "description": "At Intel I worked on two teams, first the Process & Efficiency team where I worked on two .NET MVC applications updating existing code and delivering bug fixes to all levels of the application including SQL, WPF and Razor view updates. I worked on their implementation of the Rally project management tool using Node.js, ExtJS. I helped develop SharePoint web parts to deliver business needs to a custom SharePoint application. I also switched teams for three months to develop an application that delivered custom data charting about stack traces from new solid state drive technology. For this project I built an application using Node.js, MongoDB, Express, AngularJS and utilized D3.js to create charts.",
+    "skills": [
+      "C#",
+      "Express",
+      "Node.js",
+      "AngularJS",
+      "d3.js",
+      "dimpleJS",
+      "MongoDB",
+      "SharePoint"
+    ]
+  },
+  {
+    "companyName": "M1 Technology",
+    "title": "Software Engineer",
+    "start": "6/15/2012",
+    "end": "6/15/2013",
+    "current": false,
+    "description": "M-1 was a startup that a friend built in 2012. I joined as a junior front-end engineer and built prototypes for web applications using Sencha Touch, ExtJS and DeftJs, along with HTML, CSS and SASS. The prototypes I built were integrated with a Java backend and graph database to deliver a rich user experience.",
+    "skills": [
+      "Java",
+      "Spring MVC",
+      "Sencha Touch",
+      "ExtJS",
+      "deftJS",
+      "HTML",
+      "CSS"
+    ]
+  }
+]
