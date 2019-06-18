@@ -149,7 +149,7 @@ function App() {
                         Skills
                     </Typography>
                     <Typography variant="body1" className={classes.skillsContent}>
-                        {listItems}
+                        {skillsList.join(', ')}
                     </Typography>
                 </div>
                 <div className={classes.cvSection}>
@@ -159,16 +159,18 @@ function App() {
                     {
                         <div>
                             {jobs.map(job =>
-                                <div>
-                                    <span>{job.title}</span> at <span>{job.companyName}</span>
-                                    <div>
-                                        <span>{job.start}</span> to <span>{job.end != '' ? job.end : 'Present'}</span>
+                                <div className="job_section">
+                                    <div className="job_company_info">
+                                        <span className="job_title">{job.title}</span> at <span className="job_company_name">{job.companyName}</span>
+                                        <div className="job_dates">
+                                            <span className="job_start_date">{job.start}</span> to <span className="job_end_date">{job.end != '' ? job.end : 'Present'}</span>
+                                        </div>
                                     </div>
-                                    <div>
+                                    <div className="job_description">
                                         {job.description}
                                     </div>
-                                    <div>
-                                        Skills: {job.skills}
+                                    <div className="job_skills">
+                                        Skills: {job.skills.join(', ')}
                                     </div>
                                 </div>
                             )}

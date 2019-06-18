@@ -31,3 +31,42 @@
     transform: rotate(360deg);
   }
 }
+
+.job_section {
+  margin: 8px;
+  border-bottom: 1px black solid;
+  padding-bottom: 8px;
+
+  .job_company_info {
+    padding-bottom: 4px;
+
+    .job_title {
+      font-style: italic;
+    }
+
+    .job_company_name {
+      font-weight: 600;
+    }
+
+    .job_dates {
+      float: right;
+      font-style: italic;
+
+      .job_start_date {
+        font-size: 1em;
+      }
+
+      .job_end_date {
+        font-size: 1em;
+      }
+    }
+  }
+
+  .job_description {
+    padding-bottom: 4px;
+  }
+
+  .job_skills {
+    font-size: 1em;
+  }
+}
