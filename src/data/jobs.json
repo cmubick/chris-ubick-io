@@ -5,9 +5,11 @@
     "start": "12/2017",
     "end": "",
     "current": true,
-    "description": "Current job description",
+    "description": "100% remote lead technical engineer for a large government project on a distributed team.  We've built a micro-service architecture using Java, Spring Boot, Angular, React, Kafka, Terraform, Concourse and hosted in AWS GovCloud. I provide guidance and mentorship to other developers and communicate technical ideas to the business. We use Scrum and Agile methodologies to delivery a quality product. I provide technical guidance to the team and maintain coding standards, including thorough and meaningful unit tests for our front and backend code along with functional test suites that run in our pipeline to ensure continued quality during our continuous integration and delivery.",
     "skills": [
       "Java",
+      "Spring Boot",
+      "MongoDB",
       "Angular",
       "React",
       "Jira",
@@ -28,7 +30,11 @@
     "description": "I have worked with a number of companies as a web development consultant outside of my software day job. This work has included building out Umbraco CMS web applications, custom SharePoint web parts and full stack Node.js applications using Express, AngularJS, MongoDB, and React. I’ve used a number of software management tools including TFS, JIRA, Confluence, Rally, and Pivotal Tracker. Clients include Digital Turf, NuTandem Software, Valley Oak Winery, Tulip Shop Tavern, and United Association (ua.org).",
     "skills": [
       "Java",
+      "MySQL",
+      "MongoDB",
+      "MYSQL",
       "Angular",
+      "AngularJS",
       "React",
       "Jira",
       "Concourse",
@@ -45,7 +51,7 @@
     "start": "6/2017",
     "end": "12/15/2017",
     "current": false,
-    "description": "Current job description",
+    "description": "50% remote software engineer on a distributed team. I built and maintained projects in C#, MSSQL, and React. Practiced Scrum and Agile methodologies to deliver high quality code to our internal customers. I contributed to new and existing coding standards and provided mentorship to other developers.",
     "skills": [
       "Java",
       "Angular",

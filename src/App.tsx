@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
     },
     root: {
         flexGrow: 1,
-        backgroundColor: '#E1DFD7',
+        backgroundColor: '#ead1a3',
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -46,7 +46,7 @@ const useStyles = makeStyles(theme => ({
     },
     summary: {
         margin: '8px 32px',
-        border: '1px #546e7a solid',
+        border: '1px #41463b solid',
         borderRadius: '5px',
     },
     summaryContent: {
@@ -54,7 +54,7 @@ const useStyles = makeStyles(theme => ({
     },
     experience: {
         margin: '8px 32px',
-        border: '1px #546e7a solid',
+        border: '1px #41463b solid',
         borderRadius: '5px',
     },
     experienceContent: {
@@ -62,7 +62,7 @@ const useStyles = makeStyles(theme => ({
     },
     education: {
         margin: '8px 32px',
-        border: '1px #546e7a solid',
+        border: '1px #41463b solid',
         borderRadius: '5px',
     },
     educationContent: {
@@ -70,7 +70,7 @@ const useStyles = makeStyles(theme => ({
     },
     volunteer: {
         margin: '8px 32px',
-        border: '1px #546e7a solid',
+        border: '1px #41463b solid',
         borderRadius: '5px',
     },
     volunteerContent: {
@@ -78,7 +78,7 @@ const useStyles = makeStyles(theme => ({
     },
     skills: {
         margin: '8px 32px',
-        border: '1px #546e7a solid',
+        border: '1px #41463b solid',
         borderRadius: '5px',
     },
     skillsContent: {
@@ -86,20 +86,20 @@ const useStyles = makeStyles(theme => ({
     },
     cvSection: {
         margin: '8px 32px',
-        border: '1px #546e7a solid',
+        border: '1px #41463b solid',
         borderRadius: '3px',
     },
     sectionHeader: {
         fontSize: '1.2em',
         padding: '8px 8px 0 8px',
-        color: '#546e7a',
+        color: '#41463b',
     }
 }));
 
 const theme = createMuiTheme({
     palette: {
-        primary: {main: blueGrey[600], light: '#F3F3EC'}, // Purple and green play nicely together.
-        secondary: {main: brown[400], light: '#F3F3EC'}, // This is just green.A700 as hex.
+        primary: {main: '#41463b', light: '#ead1a3'}, // Purple and green play nicely together.
+        secondary: {main: '#646448', light: '#bfbf89'}, // This is just green.A700 as hex.
     },
 });
 
