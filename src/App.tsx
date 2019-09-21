@@ -124,7 +124,7 @@ function App() {
                                 Chris Ubick
                             </Typography>
                             <Typography variant="subtitle1" className={classes.currentTitle}>
-                                Software Engineer, Tech Lead
+                                Senior Software Engineer, Tech Lead
                             </Typography>
                         </div>
                         <div className={classes.grow}/>
