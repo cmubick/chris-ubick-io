@@ -133,7 +133,7 @@ function App() {
                                 chrisubick@gmail.com
                             </Typography>
                             <Typography variant="subtitle2" className={classes.contactInfoItem}>
-                                503.810.6593
+                                503-810-6593
                             </Typography>
                         </div>
                     </Toolbar>
