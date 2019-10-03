@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
     },
     root: {
         flexGrow: 1,
-        backgroundColor: '#ead1a3',
+        backgroundColor: '#fff',
     },
     menuButton: {
         marginRight: theme.spacing(2),
@@ -98,8 +98,8 @@ const useStyles = makeStyles(theme => ({
 
 const theme = createMuiTheme({
     palette: {
-        primary: {main: '#41463b', light: '#ead1a3'}, // Purple and green play nicely together.
-        secondary: {main: '#646448', light: '#bfbf89'}, // This is just green.A700 as hex.
+        primary: {main: '#fff', light: '#000'}, // Purple and green play nicely together.
+        secondary: {main: '#fff', light: '#000'}, // This is just green.A700 as hex.
     },
 });
 
