@@ -1,11 +1,41 @@
 [
   {
-    "companyName": "U.Group",
-    "title": "Software Engineer, Tech Lead",
-    "start": "12/2017",
+    "companyName": "Chris Ubick Consulting Services",
+    "title": "Software Engineer",
+    "start": "6/2013",
     "end": "",
     "current": true,
-    "description": "100% remote lead technical engineer for a large government project on a distributed team.  We've built a micro-service architecture using Java, Spring Boot, Angular, React, Kafka, Terraform, Concourse and hosted in AWS GovCloud. I provide guidance and mentorship to other developers and communicate technical ideas to the business. We use Scrum and Agile methodologies to delivery a quality product. I provide technical guidance to the team and maintain coding standards, including thorough and meaningful unit tests for our front and backend code along with functional test suites that run in our pipeline to ensure continued quality during our continuous integration and delivery.",
+    "description": "<ul><li>Tulip Shop Tavern: <a href='http://tulipshoptavern.com' target='_blank'>http://tulipshoptavern.com</a><ul><li>Custom CMS build for bar/restaurant Tulip Shop Tavern</li><li>Admin demo available at: <a href='http://tulipshoptavern.chrisubick.io' target='_blank'>http://tulipshoptavern.chrisubick.io</a></li><li>Node.js, Express, React, DynamoDB, Serverless AWS deployment</li><li>Social media setup</li></ul></li><li>Valley Oak Winery: <a href='http://valleyoakwinery.com' target='_blank'>http://valleyoakwinery.com</a><ul><li>Custom website built for Valley Oak Winery</li><li>Node.js, Express, React, DynamoDB, Serverless AWS deployment</li><li>Graphic design: logo, web assets, wine labels, promotional material</li><li>Email campaigns: setup, design, implementation</li><li>Social media setup</li></ul></li><li>Pangram Game: <a href='http://pangram.chrisubick.io' target='_blank'>http://pangram.chrisubick.io</a><ul><li>A fun word game</li><li>Node.js, Express, React, DynamoDB, Serverless AWS deployment</li></ul></li><li>United Association: <a href='http://ua.org' target='_blank'>http://ua.org</a><ul><li>Umbraco CMS built for the United Association union of plumbers, fitters, welders and service techs</li><li>Custom deployment process and design</li></ul></li><li>Contract Software Engineer for NuTandem Software: <a href='http://www.nutandem.com' target='_blank'>http://www.nutandem.com</a><ul><li>Custom SharePoint web part development</li><li>SharePoint installations</li></ul></li></ul>",
+    "skills": [
+      "Java",
+      "JavaScript",
+      "Node.js",
+      "MySQL",
+      "MongoDB",
+      "MYSQL",
+      "PostgreSQL",
+      "DynamoDB",
+      "React",
+      "Angular",
+      "AngularJS",
+      "Jira",
+      "Concourse",
+      "Terraform",
+      "AWS",
+      "Protractor",
+      "Jest",
+      "Jasmine",
+      "JUnit",
+      "TestCafe",
+      "Graphic Design"
+    ]
+  },{
+    "companyName": "U.Group",
+    "title": "Senior Software Engineer, Technical Lead",
+    "start": "12/2017",
+    "end": "10/16/2020",
+    "current": true,
+    "description": "<ul><li>Lead a remote team of full stack engineers in a fast pace Agile environment</li><li>Developed a production full stack case management web application for a Government customer (Java, React, AngularJS, MSSQL, AWS EC2, RDS, Concourse, Terraform)</li><li>Spent 20% of time contributing to internal company Center of Excellence program and other internal software architecture and development projects</li><li>Five direct reports</li><li>Mentor developers with weekly one-on-one meetings</li><li>Provide project guidance and develop best practices in all aspects of our SDLC</li><li>Write and develop best practices for testing, including unit tests, integration tests, end-to-end automated tests and frontend unit tests</li><li>Develop and maintain automated CI/CD pipeline with multiple cloud environments for development and testing using Concourse and Terraform</li><li>Multiple short demo and code challenge projects to win new work for the company. </li><li>Team lead on a large government project building a proposal management system that connected multiple microservice systems together (Java, Spring Boot, Kafka, MongoDB, DynamoDB, Angular, React, Material Design, Concourse, Terraform, AWS ECS)</li></ul>",
     "skills": [
       "Java",
       "Spring Boot",
@@ -18,51 +48,10 @@
       "AWS",
       "Protractor",
       "Jest",
-      "Jasmine"
-    ]
-  },
-  {
-    "companyName": "Chris Ubick Consulting Services",
-    "title": "Software Engineer, Owner",
-    "start": "6/2013",
-    "end": "",
-    "current": true,
-    "description": "I have worked with a number of companies as a web development consultant outside of my software day job. This work has included building out Umbraco CMS web applications, custom SharePoint web parts and full stack Node.js applications using Express, AngularJS, MongoDB, and React. I’ve used a number of software management tools including TFS, JIRA, Confluence, Rally, and Pivotal Tracker. Clients include Digital Turf, NuTandem Software, Valley Oak Winery, Tulip Shop Tavern, and United Association (ua.org).",
-    "skills": [
-      "Java",
-      "MySQL",
-      "MongoDB",
-      "MYSQL",
-      "Angular",
-      "AngularJS",
-      "React",
-      "Jira",
-      "Concourse",
-      "Terraform",
-      "AWS",
-      "Protractor",
-      "Jest",
-      "Jasmine"
-    ]
-  },
-  {
-    "companyName": "Epiq Systems",
-    "title": "Software Engineer",
-    "start": "6/2017",
-    "end": "12/15/2017",
-    "current": false,
-    "description": "50% remote software engineer on a distributed team. I built and maintained projects in C#, MSSQL, and React. Practiced Scrum and Agile methodologies to deliver high quality code to our internal customers. I contributed to new and existing coding standards and provided mentorship to other developers.",
-    "skills": [
-      "Java",
-      "Angular",
-      "React",
-      "Jira",
-      "Concourse",
-      "Terraform",
-      "AWS",
-      "Protractor",
-      "Jest",
-      "Jasmine"
+      "Jasmine",
+      "JUnit",
+      "TestCafe",
+      "Kafka"
     ]
   },
   {
@@ -71,7 +60,7 @@
     "start": "9/2015",
     "end": "6/2017",
     "current": false,
-    "description": "I work on an Agile Scrum team of four developers and two QA testers. We work in fast paced, two week sprints to deliver stable, flexible and well tested code to meet business driven needs. Every story includes unit testing, monitoring considerations and security checks. The stack consists of SQL servers and .NET N-Tier web applications with MVC and AngularJS clients. Many of the applications are hosted in Azure. I focus on client code, but spend a lot of time in the middle tiers and backend. I also built and am currently the administrator for our deployment process, where we use Octopus and TeamCity for continuous integration. I am one of three members of our architecture committee where we design solutions to larger projects, this includes creating prototypes outside the .NET environment and describing in detail the return on investment possibilities of technologies like Docker, Node.js, TypeScript, and Angular 2.",
+    "description": "<ul><li>Full stack software development</li><li>Worked with SQL servers and .NET N-Tier web MVC applications and AngularJS clients</li><li>Many of the applications are hosted in Azure where I made significant contributions to the CI/CD pipeline using Octopus deploy</li><li>Introduced new technology and developed proof of concept applications that drove the business towards modernizing many of their internal and external applications.</li></ul>",
     "skills": [
       "C#",
       "AngularJS",
@@ -89,7 +78,7 @@
     "start": "6/2013",
     "end": "9/2015",
     "current": false,
-    "description": "At Intel I worked on two teams, first the Process & Efficiency team where I worked on two .NET MVC applications updating existing code and delivering bug fixes to all levels of the application including SQL, WPF and Razor view updates. I worked on their implementation of the Rally project management tool using Node.js, ExtJS. I helped develop SharePoint web parts to deliver business needs to a custom SharePoint application. I also switched teams for three months to develop an application that delivered custom data charting about stack traces from new solid state drive technology. For this project I built an application using Node.js, MongoDB, Express, AngularJS and utilized D3.js to create charts.",
+    "description": "<ul><li>Software developer on the Process & Efficiency team where I worked on two .NET MVC applications updating existing code and delivering bug fixes to all levels of the application including SQL, WPF and Razor view updates. </li><li>Worked on their implementation of the Rally project management tool using Node.js, ExtJS</li><li>Helped develop SharePoint web parts to deliver business needs to a custom SharePoint application used as a knowledge management system</li><li>Develop an application that delivered custom data charting about stack traces from new solid state drive technology using Node.js, MongoDB, Express, AngularJS and utilized D3.js to create charts. </li></ul>",
     "skills": [
       "C#",
       "Express",
@@ -99,23 +88,6 @@
       "dimpleJS",
       "MongoDB",
       "SharePoint"
-    ]
-  },
-  {
-    "companyName": "M1 Technology",
-    "title": "Software Engineer",
-    "start": "6/2012",
-    "end": "6/2013",
-    "current": false,
-    "description": "M-1 was a startup that a friend built in 2012. I joined as a junior front-end engineer and built prototypes for web applications using Sencha Touch, ExtJS and DeftJs, along with HTML, CSS and SASS. The prototypes I built were integrated with a Java backend and graph database to deliver a rich user experience.",
-    "skills": [
-      "Java",
-      "Spring MVC",
-      "Sencha Touch",
-      "ExtJS",
-      "deftJS",
-      "HTML",
-      "CSS"
     ]
   }
 ]

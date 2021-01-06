@@ -8,7 +8,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import { ThemeProvider } from '@material-ui/styles';
-import { blueGrey, brown } from '@material-ui/core/colors';
 import { Job } from './model/job';
 import jobsFile from './data/jobs.json';
 
@@ -109,9 +108,7 @@ function App() {
         src: imageFile,
         alt: 'my image',
     };
-    const skillsList: string[] = ['Java', 'JavaScript', 'React', 'Angular', 'HTML', 'CSS', 'Node.js', 'CI/CD', 'MongoDB', 'MySQL', 'MSSQL', 'C#']
-    const toolsList: string[] = ['IntelliJ', 'Postman', 'VSCode', 'VisualStudio', 'Slack', 'PhotoShop', 'Illustrator', 'XD']
-    const listItems = skillsList.map((d) => <span key={d}>{d} </span>)
+    const skillsList: string[] = ['Java', 'Node.js', 'React', 'Angular', 'Redux', 'SQL', 'MongoDB', 'PostgreSQL', 'Elasticsearch', 'Typescript', 'Material Design', 'Bootstrap', 'Concourse', 'Terraform', 'Spring Boot', 'AWS ECS', 'Kafka', 'Gradle', 'Maven', 'JUnit', 'TestCafe', 'React Testing Library', 'Jasmine', 'Protractor', 'Git', 'Linux', 'Scrum', 'Agile', 'Jira', 'TFS', 'SharePoint']
     const jobs: Array<Job> = JSON.parse(JSON.stringify(jobsFile));
     return (
         <ThemeProvider theme={theme}>
@@ -124,7 +121,7 @@ function App() {
                                 Chris Ubick
                             </Typography>
                             <Typography variant="subtitle1" className={classes.currentTitle}>
-                                Senior Software Engineer, Tech Lead
+                            Senior Software Engineer, Technical Lead
                             </Typography>
                         </div>
                         <div className={classes.grow}/>
@@ -140,8 +137,7 @@ function App() {
                 </AppBar>
                 <div className={classes.cvSection}>
                     <Typography variant="body1" className={classes.summaryContent}>
-                        Software developer for web and mobile applications with a passion for learning and sharpening my
-                        skills in the latest technologies.
+                    Senior software engineer and technical lead for web and mobile application projects with a passion for learning new technologies, mentoring developers, building best practices and delivering well tested outstanding software
                     </Typography>
                 </div>
                 <div className={classes.cvSection}>
@@ -158,17 +154,15 @@ function App() {
                     </Typography>
                     {
                         <div>
-                            {jobs.map(job =>
-                                <div className="job_section">
+                            {jobs.map((job,index) =>
+                                <div className="job_section" key={`${job.companyName}-${index}`}>
                                     <div className="job_company_info">
                                         <span className="job_title">{job.title}</span> at <span className="job_company_name">{job.companyName}</span>
                                         <div className="job_dates">
-                                            <span className="job_start_date">{job.start}</span> to <span className="job_end_date">{job.end != '' ? job.end : 'Present'}</span>
+                                            <span className="job_start_date">{job.start}</span> to <span className="job_end_date">{job.end !== '' ? job.end : 'Present'}</span>
                                         </div>
                                     </div>
-                                    <div className="job_description">
-                                        {job.description}
-                                    </div>
+                                    <div className="job_description" dangerouslySetInnerHTML={{__html: job.description}} />
                                     <div className="job_skills">
                                         Skills: {job.skills.join(', ')}
                                     </div>
@@ -185,7 +179,7 @@ function App() {
                         Oregon Institute of Technology
                     </Typography>
                     <Typography variant="subtitle2" className={classes.educationContent}>
-                        Studied Software Engineering
+                        Software Engineering Technology Program
                     </Typography>
                     <Typography variant="subtitle1" className={classes.educationContent}>
                         Portland Community College
