@@ -10,6 +10,7 @@ import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import { ThemeProvider } from '@material-ui/styles';
 import { Job } from './model/job';
 import jobsFile from './data/jobs.json';
+import Chip from '@material-ui/core/Chip';
 
 const useStyles = makeStyles(theme => ({
     avatar: {
@@ -22,23 +23,29 @@ const useStyles = makeStyles(theme => ({
         margin: 10,
         width: 60,
         height: 60,
+        border: '#8d5511 solid 2px'
     },
     root: {
         flexGrow: 1,
         backgroundColor: '#fff',
+        color: '#8d5511'
     },
     menuButton: {
         marginRight: theme.spacing(2),
     },
     title: {
         flexGrow: 1,
+        color: '#8d5511'
     },
     currentTitle: {
         fontStyle: 'italic',
+        color: '#8d5511'
     },
     contactInfo: {
         float: 'right',
         flexGrow: 1,
+        marginRight: 12,
+        color: '#8d5511'
     },
     contactInfoItem: {
         textAlign: 'right',
@@ -85,20 +92,21 @@ const useStyles = makeStyles(theme => ({
     },
     cvSection: {
         margin: '8px 32px',
-        border: '1px #41463b solid',
+        border: '2px #8d5511 solid',
         borderRadius: '3px',
+        padding: '12px'
     },
     sectionHeader: {
         fontSize: '1.2em',
         padding: '8px 8px 0 8px',
-        color: '#41463b',
+        color: '#8d5511',
     }
 }));
 
 const theme = createMuiTheme({
     palette: {
         primary: {main: '#fff', light: '#000'}, // Purple and green play nicely together.
-        secondary: {main: '#fff', light: '#000'}, // This is just green.A700 as hex.
+        secondary: {main: '#90cdf4', light: '#000'}, // This is just green.A700 as hex.
     },
 });
 
@@ -112,7 +120,7 @@ function App() {
     const jobs: Array<Job> = JSON.parse(JSON.stringify(jobsFile));
     return (
         <ThemeProvider theme={theme}>
-            <div className={classes.root}>
+            <div className={`${classes.root} resume_background`}>
                 <AppBar position="sticky">
                     <Toolbar>
                         <Avatar alt="Remy Sharp" src={avatarImage.src} className={classes.bigAvatar}/>
@@ -135,20 +143,20 @@ function App() {
                         </div>
                     </Toolbar>
                 </AppBar>
-                <div className={classes.cvSection}>
+                <div className={`${classes.cvSection} section_background`}>
                     <Typography variant="body1" className={classes.summaryContent}>
                     Senior software engineer and technical lead for web and mobile application projects with a passion for learning new technologies, mentoring developers, building best practices and delivering well tested outstanding software
                     </Typography>
                 </div>
-                <div className={classes.cvSection}>
+                <div className={`${classes.cvSection} section_background`}>
                     <Typography variant="subtitle2" className={classes.sectionHeader}>
                         Skills
                     </Typography>
                     <Typography variant="body1" className={classes.skillsContent}>
-                        {skillsList.join(', ')}
+                        {skillsList.map(skill => <Chip className={'cmu_chip'} label={skill} color="secondary"/>)}
                     </Typography>
                 </div>
-                <div className={classes.cvSection}>
+                <div className={`${classes.cvSection} section_background`}>
                     <Typography variant="subtitle2" className={classes.sectionHeader}>
                         Experience
                     </Typography>
@@ -171,7 +179,7 @@ function App() {
                         </div>
                     }
                 </div>
-                <div className={classes.cvSection}>
+                <div className={`${classes.cvSection} section_background`}>
                     <Typography variant="subtitle2" className={classes.sectionHeader}>
                         Education
                     </Typography>
@@ -190,7 +198,7 @@ function App() {
                         STEM Scholarship: Tuition and Expenses, 2010 – 2012
                     </Typography>
                 </div>
-                <div className={classes.cvSection}>
+                <div className={`${classes.cvSection} section_background`}>
                     <Typography variant="subtitle2" className={classes.sectionHeader}>
                         Volunteering
                     </Typography>
@@ -205,6 +213,7 @@ function App() {
                         Adopt a dog from Portland's no kill dog shelter. Find love. Give life.
                     </Typography>
                 </div>
+                <div className={'spacer'}/>
             </div>
         </ThemeProvider>
     );
